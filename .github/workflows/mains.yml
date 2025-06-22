@@ -2,12 +2,14 @@ name: 24f2008923@ds.study.iitm.ac.in
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at 00:00 UTC
-  workflow_dispatch:     # Allows manual run from GitHub UI
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
-  check-latest-user:
+  run-check:
+    name: 24f2008923@ds.study.iitm.ac.in  # <-- This ensures the run itself shows your email
     runs-on: ubuntu-latest
     steps:
-      - name: Print success
-        run: echo "✅ Daily workflow with your email is working!"
+      - name: ✅ Confirm email is in job name
+        run: echo "✅ Running job under email name"
+
