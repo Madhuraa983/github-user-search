@@ -1,13 +1,13 @@
-name: Daily GitHub User Search
+name: 24f2008923@ds.study.iitm.ac.in
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
-  workflow_dispatch:     # Allows manual run from the Actions tab
+    - cron: '0 0 * * *'  # Runs daily at 00:00 UTC
+  workflow_dispatch:     # Allows manual run from GitHub UI
 
 jobs:
   check-latest-user:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "✅ Daily workflow is working!"
+      - name: Print success
+        run: echo "✅ Daily workflow with your email is working!"
